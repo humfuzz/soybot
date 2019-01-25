@@ -1,0 +1,3 @@
+gitignore/
+auth*
+.DS_Store

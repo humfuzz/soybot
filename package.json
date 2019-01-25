@@ -1,0 +1,16 @@
+{
+  "name": "soybot",
+  "version": "1.0.0",
+  "description": "puzzling magic for discord",
+  "main": "nutrimatic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "fast-html-parser": "^1.0.1",
+    "node-fetch": "^2.3.0"
+  }
+}
