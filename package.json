@@ -2,7 +2,7 @@
   "name": "soybot",
   "version": "1.0.0",
   "description": "puzzling magic for discord",
-  "main": "nutrimatic.js",
+  "main": "soybot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,5 @@
 const discord = require("discord.io")
-const auth = require("./gitignore/auth.json")
+const auth = require("./auth.json")
 const nutrimatic = require("./nutrimatic")
 
 const soybot = new discord.Client({
