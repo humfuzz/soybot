@@ -35,47 +35,41 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
 
     let results;
 
-    switch(cmd) {
-      case 'n':
+    if(cmd == "n") {
       results = await nutrimatic.query(query);
       soybot.sendMessage({
         to: channelID,
         message: formatMessage("Nutrimatic", query, results, 0)
       });
-      break;
-
-      case 'm':
+    };
+    if(cmd == "m") {
       soybot.sendMessage({
         to: channelID,
         message: formatMessage(prevCommand, prevQuery, prevResults, prevPage+1)
       });
-      break;
-
-      case "az":
+    };
+    if(cmd == "az") {
       query = query.replace(/\n/g, " ");
-      const data = query.split(" ");
-      const newdata = data.map(function (item) { 
+      const nums = query.split(" ");
+      const newnums = nums.map(function(item) { 
   		return parseInt(item, 10); 
 	  });
-      const num_a1z26 = newdata.map(function(item) {
+      const nums_a1z26 = newnums.map(function(item) {
   		return item + 64;
 	  });
-	  const num_a0z25 = newdata.map(function (item) {
+	  const nums_a0z25 = newnums.map(function(item) {
 	  	return item + 65;
 	  });
-      const a1z26 = String.fromCharCode.apply(null, num_a1z26);
-      const a0z25 = String.fromCharCode.apply(null, num_a0z25);
       results = [
-        String.fromCharCode(...num_a1z26) + "  // a=1",
-        String.fromCharCode(...num_a0z25) + "  // a=0",
+        String.fromCharCode(...nums_a1z26) + "  // a=1",
+        String.fromCharCode(...nums_a0z25) + "  // a=0",
       ];
       soybot.sendMessage({
         to: channelID,
         message: formatMessage("a1z26", query, results, 0)
       });
-      break;
-
-      case 'bin':
+    }
+    if(cmd == "bin") {
       query = query.replace(/\n/g, " ");
       const nums = query.split(" ").map(num=>parseInt(num, 2));
 
@@ -105,7 +99,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
         message: formatMessage("Binary", query, results, 0)
       });
 
-    }
+    };
   }
 });
 
