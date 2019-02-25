@@ -22,7 +22,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
   if (userID === soybot.id) {
     return;
   }
-  
+
   if (message.substring(0, 1) === '.') {
     // console.log(message);
     let args = message.substring(1).split(/ ([\s\S]*)/);
@@ -30,7 +30,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
     let query = args[1];
 
     console.log(args);
-    
+
     console.log(cmd, query);
 
     let results;
@@ -51,8 +51,8 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
     if(cmd == "az") {
       query = query.replace(/\n/g, " ");
       const nums = query.split(" ");
-      const newnums = nums.map(function(item) { 
-  		return parseInt(item, 10); 
+      const newnums = nums.map(function(item) {
+  		return parseInt(item, 10);
 	  });
       const nums_a1z26 = newnums.map(function(item) {
   		return item + 64;
@@ -100,6 +100,60 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
       });
 
     };
+    if(cmd == "morse") {
+      query = query.replace(/\n/g, " ");
+      morse = query.split(" ");
+      const alphabet = {
+        "-----":"0",
+        ".----":"1",
+        "..---":"2",
+        "...--":"3",
+        "....-":"4",
+        ".....":"5",
+        "-....":"6",
+        "--...":"7",
+        "---..":"8",
+        "----.":"9",
+        ".-":"A",
+        "-...":"B",
+        "-.-.":"C",
+        "-..":"D",
+        ".":"E",
+        "..-.":"F",
+        "--.":"G",
+        "....":"H",
+        "..":"I",
+        ".---":"J",
+        "-.-":"K",
+        ".-..":"L",
+        "--":"M",
+        "-.":"N",
+        "---":"O",
+        ".--.":"P",
+        "--.-":"Q",
+        ".-.":"R",
+        "...":"S",
+        "-":"T",
+        "..-":"U",
+        "...-":"V",
+        ".--":"W",
+        "-..-":"X",
+        "-.--":"Y",
+        "--..":"Z",
+        "/":" ",
+      }
+      const convertedData = []
+      morse.map(function(letter) {
+        convertedData.push(alphabet[letter])
+      })
+      const results = [
+        convertedData.join(""),
+      ]
+      soybot.sendMessage({
+        to: channelID,
+        message: formatMessage("Morse", query, results, 0)
+      });
+    };
   }
 });
 
@@ -107,19 +161,19 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
 function formatMessage(command, query, results, page) {
   let pages = Math.ceil(results.length / MAX_LINES);
   console.log("pages:", pages);
-  
+
   if (page >= pages) {
     return "no more pages"
   }
-  
+
   prevCommand = command;
   prevQuery = query;
   prevResults = results;
   prevPage = page;
-  
+
   let results_string = ""
-  
-  
+
+
   // from start of page to the end of the page/results
   let i=page*MAX_LINES;
   let n=Math.min(i+MAX_LINES, results.length);
@@ -127,18 +181,18 @@ function formatMessage(command, query, results, page) {
     results_string += results[i];
     if (i+1 < n) results_string += "\n"; // add line break after all lines except last
   }
-  
+
   // console.log(results_string);
-  
+
   let pages_string = "("+(page+1).toString() + "/" + pages.toString() + ")"
-  
+
   // surround query with two backticks so that no escaped backtick cancels out both
   let message = command + " ``  "+escapeBackticks(query) + "`` : ```js\n" + results_string + " ```";
-  if (pages > 1) 
+  if (pages > 1)
     message += pages_string;
-  if (page + 1 < pages) 
+  if (page + 1 < pages)
     message +=  " `.m` for more";
-  
+
   console.log(message.length);
   return message;
 }
