@@ -7,23 +7,49 @@ const soybot = new discord.Client({
   autorun: true
 })
 
+const COMMAND_SYMBOL = ".";
 const MAX_LINES = 15; // max lines we want bot to speak at once
+const VALID_CHANNELS = ["soybot"];
+const INDENT = "        ";
+
 let prevCommand, prevQuery, prevResults, prevPage;  // store previous result and page num to see more
+let helpCommands = {}; // dictionary of commands
+let helpCommandsExamples = {}
+let helpCommandsOrder = ["az", "bin", "morse", "n"];
+
 
 // TODO: use winston for logging
 soybot.on('ready', evt=>{
   // logger.info('Connected');
   // logger.info('Logged in as: ');
   // logger.info(bot.username + ' - (' + bot.id + ')');
-  console.log("we're in", soybot.username, soybot.id)
+  console.log("we're in", soybot.username, soybot.id);
+  soybot.setPresence({
+    game: {
+      name: "type .help for help"
+    } 
+  });
 });
 
 soybot.on('message', async (user, userID, channelID, message, evt)=>{
+  const channelName = soybot.servers[evt.d.guild_id].channels[channelID].name;
+  
+  // no feedback loops
   if (userID === soybot.id) {
     return;
   }
 
-  if (message.substring(0, 1) === '.') {
+  // only allow soybot in valid channels
+  console.log(channelName); 
+  if (!VALID_CHANNELS.includes(channelName)) {
+    return;
+  }
+
+
+
+  // TODO: help command
+  
+  if (message.substring(0, 1) === COMMAND_SYMBOL) {
     // console.log(message);
     let args = message.substring(1).split(/ ([\s\S]*)/);
     let cmd = args[0];
@@ -35,6 +61,10 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
 
     let results;
 
+
+
+    helpCommands["n"] = "query Nutrimatic (https://nutrimatic.org/)";
+    helpCommandsExamples["n"] = ".n m<aop> tV[gyzqfls]u";
     if(cmd == "n") {
       results = await nutrimatic.query(query);
       soybot.sendMessage({
@@ -42,12 +72,16 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
         message: formatMessage("Nutrimatic", query, results, 0)
       });
     };
+    // helpCommands["m"] = "show next page of results"
     if(cmd == "m") {
       soybot.sendMessage({
         to: channelID,
         message: formatMessage(prevCommand, prevQuery, prevResults, prevPage+1)
       });
     };
+
+    helpCommands["az"] = "nums to letters";
+    helpCommandsExamples["az"] = ".az 4 15 5 14 10 1 14 7";
     if(cmd == "az") {
       query = query.replace(/\n/g, " ");
       const nums = query.split(" ");
@@ -69,6 +103,9 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
         message: formatMessage("a1z26", query, results, 0)
       });
     }
+
+    helpCommands["bin"] = "binary (5 bit)/bacon";
+    helpCommandsExamples["bin"] = ".bin 01100 00000 10010 10010 01101";      
     if(cmd == "bin") {
       query = query.replace(/\n/g, " ");
       const nums = query.split(" ").map(num=>parseInt(num, 2));
@@ -84,6 +121,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
         return num;
       });
 
+      // TODO: add inverted case (xor 11111)
 
       // console.log(nums);
       results = [
@@ -100,6 +138,9 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
       });
 
     };
+    
+    helpCommands["morse"] = "morse"
+    helpCommandsExamples["morse"] = ".morse - . -- .--. . ....";
     if(cmd == "morse") {
       query = query.replace(/\n/g, " ");
       morse = query.split(" ");
@@ -142,6 +183,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
         "--..":"Z",
         "/":" ",
       }
+      
       const convertedData = []
       morse.map(function(letter) {
         convertedData.push(alphabet[letter])
@@ -152,6 +194,23 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
       soybot.sendMessage({
         to: channelID,
         message: formatMessage("Morse", query, results, 0)
+      });
+    };
+
+    if(cmd == "help") {
+
+      let message = "hi, i'm soybot! here are my commands:\n"
+        + helpCommandsOrder.reduce((acc, cmd)=>acc 
+                                              + codeString(COMMAND_SYMBOL + cmd) + " - " 
+                                              + helpCommands[cmd] + "\n"
+                                              + INDENT + codeString(helpCommandsExamples[cmd]) + "\n\n",
+                                    "")
+        + "please let @hum#9254 or @wutpu#6696 know if you have any suggestions for me!"
+
+
+      soybot.sendMessage({
+        to: channelID,
+        message: message
       });
     };
   }
@@ -195,6 +254,11 @@ function formatMessage(command, query, results, page) {
 
   console.log(message.length);
   return message;
+}
+
+// format string safely for code
+function codeString(string) {
+  return "``  "+escapeBackticks(string) + "``";
 }
 
 // escape each backtick for discord markdown with dirty trick
