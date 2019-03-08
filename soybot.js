@@ -9,7 +9,7 @@ const soybot = new discord.Client({
 
 const COMMAND_SYMBOL = ".";
 const MAX_LINES = 15; // max lines we want bot to speak at once
-const VALID_CHANNELS = ["soybot"];
+const VALID_CHANNELS = ["soybot", "puzzle-bot"];
 const INDENT = "        ";
 
 let prevCommand, prevQuery, prevResults, prevPage;  // store previous result and page num to see more
