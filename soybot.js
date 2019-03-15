@@ -36,24 +36,24 @@ const logger = winston.createLogger({
     //
     new winston.transports.File({ filename: './logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: './logs/combined.log' }),
-    new winston.transports.Console({
-      colorize: true,
-      format: winston.format.combine(
-        winston.format.colorize(),
-        winston.format.align(),
-        enumerateErrorFormat(),
-        winston.format.timestamp(),
-        winston.format.simple()
-        // winston.format.printf((info) => {
-        //   const ts = info.timestamp().slice(5,19).replace('T', '   ');
-        //   if (info.args) {
-        //     return `${ts} [${info.level}]: ${info.message} ${(info.level > 3 && (Object.keys(info.args).length || Object.getOwnPropertyNames(info.args).length)) ? JSON.stringify(info.args, null, 2) : ''}`;
-        //   } else {
-        //     return `${ts} [${process.pid}] [${info.level}]: ${info.message}`;
-        //   }
-        // })
-      ),
-    })
+    // new winston.transports.Console({
+    //   colorize: true,
+    //   format: winston.format.combine(
+    //     winston.format.colorize(),
+    //     winston.format.align(),
+    //     enumerateErrorFormat(),
+    //     winston.format.timestamp(),
+    //     winston.format.simple()
+    //     // winston.format.printf((info) => {
+    //     //   const ts = info.timestamp().slice(5,19).replace('T', '   ');
+    //     //   if (info.args) {
+    //     //     return `${ts} [${info.level}]: ${info.message} ${(info.level > 3 && (Object.keys(info.args).length || Object.getOwnPropertyNames(info.args).length)) ? JSON.stringify(info.args, null, 2) : ''}`;
+    //     //   } else {
+    //     //     return `${ts} [${process.pid}] [${info.level}]: ${info.message}`;
+    //     //   }
+    //     // })
+    //   ),
+    // })
   ]
 });
 
@@ -193,7 +193,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
           String.fromCharCode(...nums_bacon) + "  // bacon",
 
         ];
-        console.log(results)
+        // console.log(results)
         soybot.sendMessage({
           to: channelID,
           message: formatMessage("Binary", query, results, 0)
@@ -284,7 +284,7 @@ soybot.on('message', async (user, userID, channelID, message, evt)=>{
 // given command, query, result, return discord markdown formatted message
 function formatMessage(command, query, results, page) {
   let pages = Math.ceil(results.length / MAX_LINES);
-  console.log("pages:", pages);
+  // console.log("pages:", pages);
 
   if (page >= pages) {
     return "no more pages"
@@ -317,7 +317,7 @@ function formatMessage(command, query, results, page) {
   if (page + 1 < pages)
     message +=  " `.m` for more";
 
-  console.log(message.length);
+  // console.log(message.length);
   return message;
 }
 
