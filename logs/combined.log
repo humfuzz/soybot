@@ -1,0 +1,113 @@
+{"message":"test","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"service":"user-service","level":"info","message":"we're in"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info","service":"user-service"}
+{"message":"soybot started.","level":"info"}
+undefined
+[32minfo[39m: soybot started.
+{"message":"soybot started.","level":"info"}
+{"message":"soybot started.","level":"info"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:09:31.358Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:11:50.634Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:12:51.369Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:13:53.158Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:15:43.017Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-09T02:18:31.505Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T22:56:32.825Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T22:56:54.466Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:01:25.332Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:04:23.002Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:07:04.280Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:07:32.481Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:07:47.442Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:08:55.834Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:09:05.727Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:09:41.400Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:18:29.510Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:18:38.485Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:18:44.497Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:20:38.909Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:20:48.641Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:21:14.094Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:21:21.270Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:22:27.112Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:22:52.147Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:23:15.499Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:23:33.976Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:23:56.753Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:24:05.889Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:25:14.506Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:25:36.772Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:25:45.470Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:26:03.068Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:26:32.050Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:29:20.976Z"}
+{"message":".help","level":"info","timestamp":"2019-03-14T23:29:24.886Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:31:09.486Z"}
+{"user":"hum","level":"info","message":".n adef","timestamp":"2019-03-14T23:31:15.048Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:31:30.223Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:32:53.468Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:33:01.342Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:33:34.925Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:33:36.300Z"}
+{"level":"warn","timestamp":"2019-03-14T23:33:36.304Z"}
+{"user":"hum","level":"info","message":".n asdfj","timestamp":"2019-03-14T23:33:40.726Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:33:43.067Z"}
+{"level":"warn","timestamp":"2019-03-14T23:33:43.068Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:34:12.511Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:34:14.229Z"}
+{"level":"error","timestamp":"2019-03-14T23:34:14.234Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:34:49.215Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:34:52.052Z"}
+{"level":"error","timestamp":"2019-03-14T23:34:52.061Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:36:31.931Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:39:11.127Z"}
+{"level":"error","timestamp":"2019-03-14T23:39:11.499Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:39:16.957Z"}
+{"level":"error","timestamp":"2019-03-14T23:39:17.194Z"}
+{"user":"hum","level":"info","message":".n as","timestamp":"2019-03-14T23:39:28.134Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:39:45.588Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:39:47.223Z"}
+{"level":"error","timestamp":"2019-03-14T23:39:47.509Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:39:55.920Z"}
+{"level":"error","timestamp":"2019-03-14T23:39:55.920Z"}
+{"user":"hum","level":"info","message":".n as","timestamp":"2019-03-14T23:39:58.777Z"}
+{"user":"hum","level":"info","message":".help as","timestamp":"2019-03-14T23:40:01.389Z"}
+{"level":"error","timestamp":"2019-03-14T23:40:01.390Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:42:10.623Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:42:12.418Z"}
+{"level":"error","timestamp":"2019-03-14T23:42:12.419Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:42:56.301Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:42:57.766Z"}
+{"message":"Cannot read property 'replace' of undefined","stack":"TypeError: Cannot read property 'replace' of undefined\n    at escapeBackticks (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:336:17)\n    at codeString (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:329:17)\n    at message.hi, i'm soybot! here are my commands:\n.helpCommandsOrder.reduce (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:271:60)\n    at Array.reduce (<anonymous>)\n    at DiscordClient.soybot.on (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:268:31)\n    at DiscordClient.emit (events.js:197:13)\n    at DiscordClient.handleWSMessage (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\discord.io\\lib\\index.js:1854:11)\n    at WebSocket.emit (events.js:197:13)\n    at Receiver.ontext (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\WebSocket.js:841:10)\n    at C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:536:18","level":"error","timestamp":"2019-03-14T23:42:57.767Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:43:21.066Z"}
+{"message":"Cannot read property 'replace' of undefined","stack":"TypeError: Cannot read property 'replace' of undefined\n    at escapeBackticks (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:336:17)\n    at formatMessage (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:317:35)\n    at DiscordClient.soybot.on (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:137:20)\n    at processTicksAndRejections (internal/process/next_tick.js:81:5)","level":"error","timestamp":"2019-03-14T23:43:21.314Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:44:16.452Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:44:17.909Z"}
+{"user":"hum","level":"info","message":".az","timestamp":"2019-03-14T23:44:23.130Z"}
+{"message":"Cannot read property 'replace' of undefined","stack":"TypeError: Cannot read property 'replace' of undefined\n    at DiscordClient.soybot.on (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:148:23)\n    at DiscordClient.emit (events.js:197:13)\n    at DiscordClient.handleWSMessage (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\discord.io\\lib\\index.js:1854:11)\n    at WebSocket.emit (events.js:197:13)\n    at Receiver.ontext (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\WebSocket.js:841:10)\n    at C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:536:18\n    at Receiver.applyExtensions (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:371:5)\n    at C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:508:14\n    at Receiver.flush (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:347:3)\n    at Receiver.finish (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:541:12)","level":"error","timestamp":"2019-03-14T23:44:23.131Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:45:02.417Z"}
+{"user":"hum","level":"info","message":".n","timestamp":"2019-03-14T23:45:03.152Z"}
+{"user":"hum","level":"info","message":".az","timestamp":"2019-03-14T23:45:04.869Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:45:06.521Z"}
+{"message":"Cannot read property 'replace' of undefined","stack":"TypeError: Cannot read property 'replace' of undefined\n    at escapeBackticks (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:333:17)\n    at codeString (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:326:17)\n    at message.hi, i'm soybot! here are my commands:\n.helpCommandsOrder.reduce (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:268:60)\n    at Array.reduce (<anonymous>)\n    at DiscordClient.soybot.on (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\soybot.js:265:31)\n    at DiscordClient.emit (events.js:197:13)\n    at DiscordClient.handleWSMessage (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\discord.io\\lib\\index.js:1854:11)\n    at WebSocket.emit (events.js:197:13)\n    at Receiver.ontext (C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\WebSocket.js:841:10)\n    at C:\\Users\\Buttercup\\Documents\\Puzzles\\soybot\\node_modules\\ws\\lib\\Receiver.js:536:18","level":"error","timestamp":"2019-03-14T23:45:06.522Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:45:18.918Z"}
+{"user":"hum","level":"info","message":".help","timestamp":"2019-03-14T23:45:20.314Z"}
+{"user":"hum","level":"info","message":".bin 01100 00000 10010 10010 01101","timestamp":"2019-03-14T23:46:14.160Z"}
+{"user":"hum","level":"info","message":".bin .bin 01100 00000 10010 10010 01101","timestamp":"2019-03-14T23:47:06.906Z"}
+{"user":"hum","level":"info","message":".bin \n01100 \n00000 \n10010\n 10010 \n01101","timestamp":"2019-03-14T23:47:17.445Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-14T23:51:22.822Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-15T00:12:51.773Z"}
+{"user":"hum","level":"info","message":".bin \n01100 \n00000 \n10010\n 10010 \n01101","timestamp":"2019-03-15T00:12:56.350Z"}
+{"user":"hum","level":"info","message":".az 123\n12 \n3 4\n 5 23","timestamp":"2019-03-15T00:13:33.270Z"}
+{"message":"soybot started.","level":"info","timestamp":"2019-03-15T00:38:08.560Z"}

@@ -11,6 +11,7 @@
   "dependencies": {
     "discord.io": "github:woor/discord.io#gateway_v6",
     "fast-html-parser": "^1.0.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "winston": "^3.2.1"
   }
 }
